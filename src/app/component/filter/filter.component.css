@@ -1,0 +1,12 @@
+.color-filter {
+    width: 15px;       /* Set fixed width */
+    height: 15px;      /* Set fixed height */
+    border: 2px solid black; /* Border for the circle */
+    border-radius: 50%; /* Make it a circle */
+    display: inline-block; /* Ensure it behaves like a block */
+    margin-left: 10px;  /* Space between checkbox and color */
+}
+
+.color-name{
+    margin-top: 2px;
+}

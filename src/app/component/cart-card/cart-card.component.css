@@ -1,0 +1,33 @@
+.cart-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.inc-decre-btn{
+  cursor: pointer;
+}
+.inc-decre-btn:hover{
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+
+@media(max-width:486px){
+  .img-inc-decre-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cart-img{
+    width: 120px;
+  height: 120px;
+  object-fit: contain;
+  }
+  .text-size-sm{
+    line-height: 1;
+    font-size: 13px;
+  }
+}
+
+

@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center align-items-center w-100 gap-4">
+  <div class="d-flex justify-content-center w-100 flex-wrap">
+    @for(product of nikeShoesCopy | async; track product._id){
+    <div class="col-6 col-md-4 col-lg-3">
+      <app-main-card [product]="product"></app-main-card>
+    </div>
+    }@empty {
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      "
+    >
+      No Such Data Found
+    </div>
+    }
+  </div>
+</div>

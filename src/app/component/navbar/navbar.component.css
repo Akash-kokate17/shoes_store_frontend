@@ -1,0 +1,44 @@
+
+.nav-backgroud-color {
+  background-color: #2874f0;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.ul-border-bottom {
+  border-bottom: 2px solid transparent;
+  transition: transform, border-bottom 1s ease-in-out;
+  user-select: none;
+}
+
+.ul-border-bottom:hover {
+  border-bottom: 2px solid white;
+  transform: translateY(3px);
+  cursor: pointer;
+}
+
+
+.shop-store-logo {
+  max-width: 50px;
+  user-select: none;
+}
+.logo-border-name {
+  border-bottom: 2px solid greenyellow;
+  user-select: none;
+}
+
+@media (max-width: 576px) {
+  .shop-store-logo {
+    width: 32px;
+    height: auto;
+  }
+  .ul-border-bottom {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .logo-border-name {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,18 @@
+<div
+  class="d-flex justify-content-center w-100"
+  style="background-color: #f1f2f4"
+>
+  <div class="row p-2 d-flex justify-content-center w-100">
+    <div class="">
+      <app-filter #filter></app-filter>
+    </div>
+    <div>
+      <app-nike-main
+        [selectedDiscount]="filter.selectedDiscountArr"
+        [selectedColor]="filter.selectedColorArr"
+        [minVal]="filter.selectedValMin"
+        [maxVal]="filter.selectedValMax"
+      ></app-nike-main>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div
+  class="d-flex justify-content-center align-items-center flex-wrap w-100 bg-white mt-3"
+>
+  <div class="d-flex justify-content-center align-items-center flex-wrap w-100">
+    <div class="w-100 m-1 border rounded-3">
+      <p class="ms-4 text-secondary h5 mt-2 text-size">Price Details</p>
+      <hr class="m-1" />
+
+      <div class="d-flex justify-content-between px-3 w-100">
+        <p class="text-secondary text-size">price items:</p>
+        <p class="text-size">&#8377;{{ originalPrice }}</p>
+      </div>
+      <div class="d-flex justify-content-between px-3 w-100">
+        <p class="text-secondary text-size">Discount:</p>
+        <p class=" text-size">&#8377;{{discount}}</p>
+    </div>
+      <div class="d-flex justify-content-between px-3 w-100">
+        <p class="text-secondary text-start  text-size ">Delivery Charges</p>
+        <p class=" text-size text-end"><span class="text-secondary text-decoration-line-through">&#8377;40</span><span class="text-success">Free</span></p>
+    </div>
+    <hr>
+     <div class="d-flex justify-content-between px-3 w-100">
+        <p class="h6 text-start text-size">Total Amount</p>
+        <p class="h6 text-start">&#8377;{{price}}</p>
+     </div>
+     <hr>
+
+      <p class="h6 ms-4 text-success text-size">
+        You will save {{ discount }} on this order
+      </p>
+    </div>
+  </div>
+</div>

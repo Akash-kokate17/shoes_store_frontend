@@ -1,0 +1,134 @@
+<div
+  class="d-flex justify-content-center align-items-center vh-100 w-100 flex-wrap"
+  style="background: linear-gradient(to bottom right, #f8f7f8, #6f6fcf)"
+>
+  <div class="row m-3 sing_up_div">
+    <form
+      [formGroup]="signUpForm"
+      (submit)="handleSignUp(signUpForm)"
+      class="sign_up_container"
+      style="padding-top: 50px; padding-bottom: 50px"
+    >
+      <h1 class="text-center text-black">Sign Up</h1>
+      <div class="d-flex gap-3 justify-content-center align-items-center">
+        <div>
+          <input
+            type="text"
+            name="FirstName"
+            class="form-control border border-black"
+            placeholder="First Name"
+            formControlName="fName"
+            autofocus
+          />
+          <span
+            *ngIf="
+              signUpForm.controls['fName'].dirty &&
+              signUpForm.controls['fName'].hasError('minlength')
+            "
+            class="text-danger"
+            >Min. 2 letters</span
+          >
+        </div>
+        <div>
+          <input
+            type="text"
+            name="LastName"
+            class="form-control"
+            placeholder="Last Name"
+            formControlName="lName"
+          />
+          <span
+            *ngIf="
+              signUpForm.controls['lName'].dirty &&
+              signUpForm.controls['lName'].hasError('minlength')
+            "
+            class="text-danger"
+          >
+            Min. 2 letters</span
+          >
+        </div>
+      </div>
+      <div class="d-flex my-3 gap-3 justify-content-center align-items-center">
+        <div>
+          <input
+            type="text"
+            name="phoneNumber"
+            class="form-control"
+            placeholder="Phone Number"
+            formControlName="phoneNo"
+          />
+          <span
+            *ngIf="
+              (signUpForm.controls['phoneNo'].dirty &&
+                signUpForm.controls['phoneNo'].hasError('minlength')) ||
+              signUpForm.controls['phoneNo'].hasError('maxlength')
+            "
+            class="text-danger"
+          >
+            10 digits required
+          </span>
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Email"
+            formControlName="email"
+          /><span
+            class="text-danger email"
+            *ngIf="
+              signUpForm.controls['email'].dirty &&
+              signUpForm.controls['email'].hasError('email')
+            "
+            >email must includes &#64;gmail.com</span
+          >
+        </div>
+      </div>
+      <div class="d-flex gap-3 justify-content-center align-items-center">
+        <div class="password_div">
+          <input
+            type="password"
+            name="user_pass"
+            class="form-control"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <div>
+            <span
+              class="text-danger pass_line_width_hight"
+              *ngIf="
+                signUpForm.controls['password'].hasError('invalidPass') &&
+                signUpForm.controls['password'].dirty
+              "
+            >
+              8-20 chars 1uppercase 1No 1symbol.
+            </span>
+          </div>
+        </div>
+        <div class="password_div">
+          <input
+            type="password"
+            name="cnfPassword"
+            class="form-control"
+            placeholder="Confirm Password"
+            formControlName="cnfPass"
+          />
+          <span
+            *ngIf="
+              signUpForm.controls['password'].value !==
+                signUpForm.controls['cnfPass'].value &&
+              signUpForm.controls['cnfPass'].dirty
+            "
+            class="text-danger"
+            >Passwords don’t match</span
+          >
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <button class="btn btn-primary w-100">submit</button>
+      </div>
+      <p routerLink="/login" class="text-center mt-4">Already have an account? <span class="text-primary text-decoration-underline">Login</span></p>
+    </form>
+  </div>
+</div>

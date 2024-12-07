@@ -1,0 +1,19 @@
+.nike_card_css {
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+.nike_card_css:hover {
+  transform: translateY(-20px);
+}
+
+/* .nike-card {
+  border: 2px solid rgb(170, 161, 161);
+  margin: 50px;
+} */
+
+@media (max-width: 768px) {
+  .nike-card {
+    border: 2px solid rgb(170, 161, 161);
+    margin: 5px;
+  }
+}

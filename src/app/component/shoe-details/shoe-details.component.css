@@ -1,0 +1,72 @@
+.rotate{
+    height: 500px;
+    width: 500px;
+    border: 1px solid rgb(198, 198, 198);
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: all 3s ease-in-out;
+    user-select: none;
+}
+
+.rotate:hover{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.btn-section{
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 10px;
+}
+
+.btn-size{
+    width: 230px;
+    padding: 10px;
+}
+
+.detail-div{
+    user-select: none;
+}
+
+.bg-color{
+    background-color: black;
+    color: white;
+}
+
+@media(max-width:700px){
+    .rotate{
+        height: 300px;
+        width: 300px;
+        margin-top: 2px;
+    }
+    .btn-size{
+        width: 130px;
+        padding: 8px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+    .rotate{
+        height: 400px;
+        width: 400px;
+        margin-top: 2px;
+    }
+    .btn-size{
+        width: 150px;
+        padding: 10px;
+    }
+}
+
+@media(min-width: 1025px){
+    .rotate{
+        height: 500px;
+        width: 500px;
+        margin-top: 10px;
+    }
+    .btn-size{
+        width: 230px;
+        padding: 12px;
+    }
+}
+

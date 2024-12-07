@@ -1,0 +1,42 @@
+<div class="card-container mb-4">
+  <div
+    class="card-section overflow-hidden"
+    [routerLink]="['/shoe-details-page']"
+    [queryParams]="{
+      id: product._id,
+      brand: product.brand,
+      model: product.model,
+      originalPrice: product.originalPrice,
+      price: product.price,
+      sizes: product.sizes,
+      img:product.img,
+      discount:product.discount,
+      
+    }"
+  >
+    <div class="image-container">
+      <img [src]="product.img" alt="" class="nike-img img-fluid" />
+    </div>
+    <div class="footer-section p-3">
+      <div>
+        <span class="text-truncate fw-bold">{{ product.brand }}</span>
+        <p class="text-truncate mb-1">{{ product.model }}</p>
+      </div>
+      <div class="d-flex gap-2 align-items-center my-2">
+        <span class="fw-bold text-dark">&#8377;{{ product.price }}</span>
+        <span class="text-danger text-decoration-line-through"
+          >&#8377;{{ product.originalPrice }}</span
+        >
+        <span class="text-success text-truncate">{{ product.discount }}</span>
+      </div>
+      <div>
+        <span>Size: </span>
+        @if(product.sizes) {
+        {{ product.sizes.join(", ") }}
+        }@else{
+        <span>size not available</span>
+        }
+      </div>
+    </div>
+  </div>
+</div>

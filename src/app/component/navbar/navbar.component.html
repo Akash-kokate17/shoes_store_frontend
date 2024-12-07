@@ -1,0 +1,31 @@
+<div
+  class="w-100 d-flex justify-content-between align-items-center nav-backgroud-color p-2 flex-nowrap"
+>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="fw-bolder">
+      <span class="logo-border-name">MyShoes</span>
+      <img
+        src="https://th.bing.com/th/id/R.9cfe824487749e1f73f151cafdab9ac1?rik=AkH4NcQGaTRPYA&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fshoes-transparent%2fshoes-transparent-6.png&ehk=V4ROD9O6r%2fKNc3Nos2EKycoW5a55%2f43Gl36pjhCSOAQ%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        alt="shop store"
+        class="shop-store-logo"
+      />
+    </div>
+    <ul class="d-flex justify-content-center gap-3 list-unstyled mb-0">
+      <li class="ul-border-bottom" [routerLink]="['/home']">Home</li>
+      <li class="ul-border-bottom" [routerLink]="['/nike']">Nike</li>
+      <li class="ul-border-bottom" [routerLink]="['/adidas']">Adidas</li>
+      <li class="ul-border-bottom" [routerLink]="['/puma']">Puma</li>
+    </ul>
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center">
+    <ul class="d-flex list-unstyled gap-2 mb-0 me-1 ms-1">
+      @if(user_login){
+      <li class="ul-border-bottom" (click)="logout()">Logout</li>
+      }@else{ 
+        <li class="ul-border-bottom" routerLink="/login">Login</li>
+      }
+      <li class="ul-border-bottom" [routerLink]="['/cart']">🛒Cart</li>
+    </ul>
+  </div>
+</div>

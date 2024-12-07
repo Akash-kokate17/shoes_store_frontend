@@ -1,0 +1,18 @@
+<div
+  class="d-flex justify-content-center w-100"
+  style="background-color: #f1f2f4"
+>
+  <div class="row p-2 d-flex justify-content-evenly w-100">
+    <div class="">
+      <app-filter #filterPuma></app-filter>
+    </div>
+    <div>
+      <app-puma-main
+        [selectedDiscount]="filterPuma.selectedDiscountArr"
+        [selectedColor]="filterPuma.selectedColorArr"
+        [minVal]="filterPuma.selectedValMin"
+        [maxVal]="filterPuma.selectedValMax"
+      ></app-puma-main>
+    </div>
+  </div>
+</div>

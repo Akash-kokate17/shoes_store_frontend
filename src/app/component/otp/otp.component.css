@@ -1,0 +1,21 @@
+.otp_div{
+    height: 400px;
+    width: 350px;
+    max-width: 100%;
+    border: 1px solid rgb(184, 182, 182);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 2px 15px rgb(174, 173, 173);
+}
+
+
+.generate-otp-again-text{
+    cursor: pointer;
+    font-size: small;
+    font-family:'Times New Roman', Times, serif;
+}

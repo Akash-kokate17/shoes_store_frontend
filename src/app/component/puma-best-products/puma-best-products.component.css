@@ -1,0 +1,19 @@
+.puma_card_css {
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+.puma_card_css:hover {
+  transform: translateY(-20px);
+}
+
+/* .puma-card {
+  border: 2px solid rgb(170, 161, 161);
+  margin: 5px;
+} */
+
+@media (max-width: 768px) {
+  .puma-card {
+    border: 2px solid rgb(170, 161, 161);
+    margin: 5px;
+  }
+}

@@ -1,0 +1,25 @@
+.circle{
+    height: 40px;
+    width: 45px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    right: 0%;
+    margin-right: 10px;
+    transform: translateX(-10px);
+}
+
+.navigation-bar{
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .title_size{
+        font-size: 25px;
+    }
+}
+
+.background_circle{
+    background-color: #2874f0;
+}

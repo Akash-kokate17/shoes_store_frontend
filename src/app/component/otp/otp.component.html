@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center align-items-center w-100">
+    <div class="d-flex justify-content-center align-items-center vh-100 w-100">
+        <div class="otp_div">
+            <div class="">
+                <input class="form-control border-2 text-center" placeholder="Enter Otp Here....." [(ngModel)]="otp_input" maxlength="6" minlength="6" required/>
+                <p class="fw-light mt-1 generate-otp-again-text">If You Don't Get Otp <span class="text-primary fw-light" (click)="generateOtp()">Generate Here</span></p>
+            </div>
+            <div>
+                <button class="btn btn-success" (click)="verifyOtp()">Verify Otp</button>
+            </div>
+        </div>
+    </div>
+</div>
+

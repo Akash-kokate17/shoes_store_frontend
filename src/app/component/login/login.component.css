@@ -1,0 +1,35 @@
+.login_div{
+    border-radius: 10px;
+    border-top-left-radius:60px ;
+}
+
+.profile_img{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.input_div{
+    width: 300px;
+}
+
+.password_container{
+position: relative;
+}
+
+.password_icon{
+position: absolute;
+right: 10px;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+}
+
+.register_link{
+    cursor: pointer;
+}
+
+@media(max-width:587px){
+    .profile_img{
+        width: 140px;
+    }
+}

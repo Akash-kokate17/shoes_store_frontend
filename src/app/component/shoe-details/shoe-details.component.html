@@ -1,0 +1,44 @@
+<div
+  class="d-flex flex-md-row justify-content-center align-items-center w-100 container-fluid flex-wrap"
+>
+  <div
+    class="d-flex justify-content-center align-items-center overflow-hidden w-100 m-4 p-2 flex-wrap" style="border: 1px solid rgb(186, 183, 183); border-radius: 5px; background-color: rgb(245, 247, 247);"
+  >
+    <div class="">
+      <div class="">
+        <img [src]="shoeData.img" alt="" class="img-fluid rotate" />
+      </div>
+      <div class='btn-section'>
+          <div class="btn btn-success btn-size" (click)="addToCart(shoeData)">Add To Cart</div>
+          <div class="btn btn-danger btn-size">Buy Now</div>
+      </div>
+    </div>
+
+    <div class="ms-4 detail-div">
+       <span class="fw-bold">{{shoeData.brand}}</span>
+       <p class="">{{shoeData.model}}</p>
+           <div class="d-flex gap-2">
+        <p class="fw-bold fs-3">&#8377;{{shoeData.price}}</p>
+        <p class="text-secondary text-decoration-line-through">&#8377;{{shoeData.originalPrice}}</p>
+        <p class="text-success">{{shoeData.discount}}</p>
+       </div>
+       <div>
+        <ng-container *ngIf="shoeData?.sizes?.length > 0 && shoeData.sizes; else outOfStock">
+          <p class="d-flex gap-2">
+            <span *ngFor="let shoeSize of shoeData.sizes; let i = index ;">
+              <span class="border p-2 rounded-2 border-black" [ngClass]="i === count?'bg-color':''" (click)="selectedSize(shoeSize,i)">
+                {{ shoeSize}}
+              </span>
+            </span>
+          </p>
+        </ng-container>
+      
+        <ng-template #outOfStock>
+          <p class="text-danger">Out Of Stock</p>
+        </ng-template>
+      </div>
+      
+               
+    </div>
+  </div>
+</div>

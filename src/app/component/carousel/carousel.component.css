@@ -1,0 +1,14 @@
+.carousel-img-size {
+    height: 450px; 
+    object-fit: cover; 
+    width: 100%;
+}
+
+/* For small phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .carousel-img-size {
+        height: 180px; 
+    }
+}
+
+
