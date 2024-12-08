@@ -31,7 +31,7 @@
             show ? "Hide" : "Show"
           }}</span>
         </div>
-        <button class="btn btn-primary" (click)="handleLogin(phoneOrEmail,userPassword)">Submit</button>
+        <button class="btn btn-primary" (click)="handleLogin(phoneOrEmail,userPassword)" [disabled]="handleLoginBtn">Submit</button>
         <p class="text-center" routerLink="/signUp">
           If you don't have an account,
           <span class="text-primary text-decoration-underline register_link"

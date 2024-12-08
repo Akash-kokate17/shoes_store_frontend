@@ -16,6 +16,8 @@ import { SendOtpService } from '../../services/send-otp.service';
 export class LoginComponent {
   show: boolean = false;
   password: string = 'password';
+  handleLoginBtn :any= false;
+
 
   constructor(
     private login: SignUpService,
@@ -29,6 +31,7 @@ export class LoginComponent {
   }
 
   handleLogin(phoneOrEmail: any, password: any) {
+    this.handleLoginBtn = true;
     const userInfo = {
       email: phoneOrEmail.value,
       password: password.value,
@@ -57,20 +60,25 @@ export class LoginComponent {
                       'Check your email for the OTP.',
                       'success'
                     );
+                    this.handleLoginBtn = false;
                     this.router.navigate(['otpComponent']);
                   } else {
                     Swal.fire('Error', response.msg, 'error');
+                    this.handleLoginBtn = false;
                   }
                 },
                 error: (err) => {
                   console.error('Error while sending OTP:', err);
                   Swal.fire('Error', 'Failed to send OTP. Try again.', 'error');
+                  this.handleLoginBtn = false;
                 },
               });
           } else if (response.userFound == false) {
             Swal.fire('error', 'User Not Found', 'error');
+            this.handleLoginBtn = false;
           } else if (response.password === false) {
             Swal.fire('error', 'password not matched', 'error');
+            this.handleLoginBtn = false;
           }
         },
       });

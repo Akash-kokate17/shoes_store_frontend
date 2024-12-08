@@ -11,7 +11,7 @@ import {
 import passwordValidator from '../../utils/passwordValidator';
 import { SignUpService } from '../../services/sign-up.service';
 import { exhaustMap, map, of, tap } from 'rxjs';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -25,7 +25,8 @@ export class SignUpComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private signUpServices: SignUpService
+    private signUpServices: SignUpService,
+    private router:Router
   ) {
     this.signUpForm = this.formBuilder.group({
       fName: new FormControl('', [
@@ -128,6 +129,7 @@ export class SignUpComponent {
                     'success'
                   );
                   this.signUpForm.reset();
+                  this.router.navigate(['/login'])
                 },
                 error: (error: any) => {
                   Swal.fire(
