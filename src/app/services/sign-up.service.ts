@@ -19,12 +19,12 @@ export class SignUpService {
 
  // fetchRegisterUser is for get all data in userregisters database to check user is already exists
   fetchRegisterUser = () => {
-    return this.http.get('http://localhost:5000/authController/registerUser');
+    return this.http.get(`${apiBaseUrl}/registerUser`);
   };
 
   // post user data to login auth 
    
   postUserDataForAuth = (userInfo:any)=>{
-    return this.http.post('http://localhost:5000/authController/login',userInfo)
+    return this.http.post(`${apiBaseUrl}/authController/login`,userInfo)
   }
 }
