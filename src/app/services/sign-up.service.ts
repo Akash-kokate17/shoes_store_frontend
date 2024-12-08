@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { apiBaseUrl } from '../../../backendUrl';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class SignUpService {
   // postUserData is for post data in userregisters in database
   postUserData = (user: any) => {
     return this.http.post(
-      'http://localhost:5000/authController/register',
+      `${apiBaseUrl}/authController/register`,
       user
     );
   };
