@@ -29,6 +29,12 @@
   user-select: none;
 }
 
+.router-active{
+  border-bottom: 2px solid black;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+}
+
 @media (max-width: 576px) {
   .shop-store-logo {
     width: 32px;
@@ -36,9 +42,23 @@
   }
   .ul-border-bottom {
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 400;
   }
   .logo-border-name {
     font-size: 12px;
+  }
+}
+
+@media(max-width:320px){
+  .shop-store-logo {
+    width: 20px;
+    height: auto;
+  }
+  .ul-border-bottom {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .logo-border-name {
+    font-size: 10px;
   }
 }
