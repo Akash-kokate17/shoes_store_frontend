@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center w-100 flex-wrap overflow-hidden mt-2 mb-2">
     <div class="row p-2 m-1 rounded-2 adidas-card w-100">
-     <app-title-bar [nike_title]="adidas_title" routerLink="adidas"></app-title-bar>
+     <app-title-bar [nike_title]="adidas_title" routerLink="/adidas"></app-title-bar>
      @for(product of adidas_products | async; track product._id){
      <div class="col-6 col-md-6 col-lg-3 adidas_card_css">
        <app-card [product]="product"></app-card>
