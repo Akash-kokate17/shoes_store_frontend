@@ -1,10 +1,7 @@
-[build]
-  command = "ng build"
-  publish = "e-commerce-app-two/dist/angular_project_july_2024_2/browser"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-  #some chang
+  
