@@ -27,4 +27,9 @@ export class SignUpService {
   postUserDataForAuth = (userInfo:any)=>{
     return this.http.post(`${apiBaseUrl}/authController/login`,userInfo)
   }
+
+  
+  netlifyService(){
+    return
+  }
 }
