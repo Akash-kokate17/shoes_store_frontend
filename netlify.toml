@@ -1,5 +1,5 @@
 [build]
-  command = "ng build --configuration production"
+  command = "ng build"
   publish = "e-commerce-app-two/dist/angular_project_july_2024_2/browser"
 
 [[redirects]]
@@ -7,4 +7,4 @@
   to = "/index.html"
   status = 200
 
-  #some change
+  #some chang
