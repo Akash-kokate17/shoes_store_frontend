@@ -28,8 +28,4 @@ export class SignUpService {
     return this.http.post(`${apiBaseUrl}/authController/login`,userInfo)
   }
 
-  
-  netlifyService(){
-    return
-  }
 }

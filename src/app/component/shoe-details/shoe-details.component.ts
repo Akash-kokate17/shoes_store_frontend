@@ -17,6 +17,10 @@ export class ShoeDetailsComponent {
   count: number = 0;
   size: any;
 
+  buyNow(){
+    alert('Your Item Is Ready For Dispatch')
+  }
+
   ngOnInit() {
   this.activatedRoute.queryParams.subscribe((product: any) => {
     this.shoeData = { ...product };
